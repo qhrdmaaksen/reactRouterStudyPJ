@@ -9,6 +9,7 @@ function App() {
     <div>
       <MainHeader />
       <main>
+
         <Route path="/welcome">
           {/*url 뒤에 /Welcome 의 경로가 붙을 경우에만 Welcome 표시*/}
           <Welcome />
@@ -16,7 +17,8 @@ function App() {
         <Route path="/products">
           <Products />
         </Route>
-        <Route path="/product-detail/:productId">
+        {/*-동적 라우트 path /example/:productId 로 :동적경로 세그먼트로 이페이지가 로드되어야하는 전체 경로는 다음과 같을거라고 라우터에게 알려주는것*/}
+        <Route path='/products/:productId'>
           <ProductDetail />
         </Route>
       </main>
